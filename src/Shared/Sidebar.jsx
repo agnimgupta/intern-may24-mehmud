@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 import dashboard from "../assets/dashboard.png";
@@ -10,8 +10,10 @@ import coupons from "../assets/coupons.png";
 import concerns from "../assets/concerns.png";
 import referral from "../assets/referral.png";
 import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
+import { ModalContext } from "../Pages/ModalContext/ModalProvider";
 
 const Sidebar = () => {
+  const { openModal } = useContext(ModalContext);
   const [isCouponsDropdownOpen, setIsCouponsDropdownOpen] = useState(false);
 
   const toggleCouponsDropdown = () => {
@@ -20,8 +22,8 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div className="flex h-full mt-5 rounded-tr-3xl">
-        <div className="w-64 min-h-full rounded-tr-3xl bg-white">
+      <div className="flex h-full mt-5 rounded-tr-3xl ">
+        <div className="w-64 min-h-full rounded-tr-3xl bg-white ">
           <h1 className="px-4 pt-4 font-medium">Main</h1>
           <ul className="menu text-lg mb-5 p-4 space-y-6 mt-5">
             <li className="flex items-center justify-between">
@@ -90,10 +92,12 @@ const Sidebar = () => {
                       <NavLink
                         className={({ isActive, isPending }) =>
                           `${isPending ? "" : ""} ${
-                            isActive ? "text-[#28643b]" : "text-[#93b19d]"
+                            isActive
+                              ? "text-[#28643b] font-bold"
+                              : "text-[#93b19d]"
                           }`
                         }
-                        to="/coupons/discount">
+                        to="/couponList">
                         Coupon List
                       </NavLink>
                     </li>
@@ -101,11 +105,13 @@ const Sidebar = () => {
                       <NavLink
                         className={({ isActive, isPending }) =>
                           `${isPending ? "" : ""} ${
-                            isActive ? "text-[#28643b]" : "text-[#93b19d]"
+                            isActive
+                              ? "text-[#28643b] font-bold"
+                              : "text-[#93b19d]"
                           }`
                         }
-                        to="addCoupns">
-                        Add Coupon
+                        to="/addCoupons">
+                        <h1 onClick={openModal}>Add Coupon</h1>
                       </NavLink>
                     </li>
                   </ul>

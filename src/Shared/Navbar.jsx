@@ -8,7 +8,7 @@ import { IoSettings } from "react-icons/io5";
 const Navbar = () => {
   return (
     <div>
-      <div className="flex bg-white py-5 items-center justify-between px-5">
+      <div className="flex bg-white py-5 items-center justify-between px-5 ">
         <div className="flex items-center gap-2">
           <img className="h-14" src={logo} alt="" />
           <img className="h-14" src={amrutam} alt="" />
