@@ -1,15 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
-import Coupons from "../Pages/Coupons/Coupons";
+import AddCoupons from "../Pages/AddCoupons/AddCoupons";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    // element: <h1>hwllo</h1>,
     element: <Root />,
     children: [
       {
-        path: "/",
-        element: <Coupons />,
+        path: "/addCoupons",
+        element: <AddCoupons />,
       },
     ],
   },

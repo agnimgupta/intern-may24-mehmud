@@ -88,16 +88,24 @@ const Sidebar = () => {
                   <ul className="ml-6 mt-2 space-y-2">
                     <li>
                       <NavLink
-                        className="flex items-center gap-3 font-medium text-[#666776]"
+                        className={({ isActive, isPending }) =>
+                          `${isPending ? "" : ""} ${
+                            isActive ? "text-[#28643b]" : "text-[#93b19d]"
+                          }`
+                        }
                         to="/coupons/discount">
-                        Discount Coupons
+                        Coupon List
                       </NavLink>
                     </li>
                     <li>
                       <NavLink
-                        className="flex items-center gap-3 font-medium text-[#666776]"
-                        to="/coupons/special-offers">
-                        Special Offers
+                        className={({ isActive, isPending }) =>
+                          `${isPending ? "" : ""} ${
+                            isActive ? "text-[#28643b]" : "text-[#93b19d]"
+                          }`
+                        }
+                        to="addCoupns">
+                        Add Coupon
                       </NavLink>
                     </li>
                   </ul>
@@ -105,20 +113,6 @@ const Sidebar = () => {
               ) : (
                 ""
               )}
-              {/* {isCouponsDropdownOpen && (
-                <ul className="ml-6 mt-2 space-y-2">
-                  <li>
-                    <NavLink className="flex items-center gap-3 font-medium text-[#666776]" to="/coupons/discount">
-                      Discount Coupons
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink className="flex items-center gap-3 font-medium text-[#666776]" to="/coupons/special-offers">
-                      Special Offers
-                    </NavLink>
-                  </li>
-                </ul>
-              )} */}
             </li>
             <li className="flex items-center justify-between">
               <NavLink
@@ -141,7 +135,6 @@ const Sidebar = () => {
           </ul>
         </div>
         <div className="flex-1 bg-main-blue-100">
-          <div>{/* <Navbar></Navbar> */}</div>
           <Outlet />
         </div>
       </div>
