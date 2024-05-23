@@ -8,9 +8,7 @@ const Root = () => {
   const { isModalOpen } = useContext(ModalContext);
   return (
     <div className={`${isModalOpen ? "bg-[#acacac]" : "bg-[#f5f5f6]"}`}>
-      <div>
-        <Navbar></Navbar>
-      </div>
+      <Navbar></Navbar>
 
       <Sidebar />
     </div>
