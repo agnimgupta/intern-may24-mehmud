@@ -22,7 +22,7 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div className="flex h-full mt-5 rounded-tr-3xl ">
+      <div className="flex h-full mt-5 rounded-tr-3xl  ">
         <div className="w-64 min-h-full rounded-tr-3xl bg-white ">
           <h1 className="px-4 pt-4 font-medium">Main</h1>
           <ul className="menu text-lg mb-5 p-4 space-y-6 mt-5">
