@@ -1,3 +1,5 @@
+import { FaRegCalendarAlt } from "react-icons/fa";
+
 const CouponForm = () => {
   return (
     <div className="px-10 py-10">
@@ -18,7 +20,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -33,7 +35,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -51,7 +53,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -81,7 +83,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -96,7 +98,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -114,7 +116,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -133,7 +135,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -148,7 +150,7 @@ const CouponForm = () => {
                   <select
                     id="userType"
                     className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
+                    <option value=""></option>
                     <option value="userType1">User Type 1</option>
                     <option value="userType2">User Type 2</option>
                   </select>
@@ -160,31 +162,34 @@ const CouponForm = () => {
                   <label
                     htmlFor="userType"
                     className="absolute transform mt-1 -translate-x-7 text-left text-gray-700 bg-white z-10 text-xs font-bold ml-14">
-                    Total Inventory{" "}
-                    <span className="text-red-600 ml-1 ">*</span>
+                    Valid From <span className="text-red-600 ml-1 ">*</span>
                   </label>
-                  <select
-                    id="userType"
-                    className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
-                    <option value="userType1">User Type 1</option>
-                    <option value="userType2">User Type 2</option>
-                  </select>
+                  <div className="relative">
+                    <input
+                      type="calender"
+                      id="userType"
+                      className=" w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none"></input>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 mt-3 pointer-events-none">
+                      <FaRegCalendarAlt className="text-gray-400 text-lg" />
+                    </div>
+                  </div>
                 </div>
                 <div className="w-full">
                   <label
                     htmlFor="userType"
                     className="absolute transform mt-1  -translate-x-7 text-left text-gray-700 bg-white z-10 text-xs font-bold ml-14">
-                    Max Redemption by per Doctor
+                    Valid Till
                     <span className="text-red-600 ml-1">*</span>
                   </label>
-                  <select
-                    id="userType"
-                    className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                    {/* <option value="">Select Type</option> */}
-                    <option value="userType1">User Type 1</option>
-                    <option value="userType2">User Type 2</option>
-                  </select>
+                  <div className="relative">
+                    <input
+                      type="calender"
+                      id="userType"
+                      className=" w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none"></input>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 mt-3 pointer-events-none">
+                      <FaRegCalendarAlt className="text-gray-400 text-lg" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

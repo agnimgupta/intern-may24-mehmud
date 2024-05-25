@@ -140,7 +140,7 @@ const Sidebar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-1 bg-main-blue-100">
+        <div className="flex-1 ">
           <Outlet />
         </div>
       </div>
