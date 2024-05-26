@@ -5,6 +5,8 @@ import { LuArrowUpDown } from "react-icons/lu";
 import plus from "../../assets/plus.png";
 import reload from "../../assets/reload.png";
 import CouponDetails from "./CouponDetails";
+import leftArrow from "../../assets/leftArrow.png";
+import RightArrow from "../../assets/rightArrow.png";
 
 const CouponList = () => {
   return (
@@ -43,6 +45,16 @@ const CouponList = () => {
 
           <div className="mt-4 ">
             <CouponDetails />
+          </div>
+        </div>
+      </div>
+      <div className="flex px-14 font-medium text-gray-400 items-center justify-between">
+        <div>Rows per page: 8</div>
+        <div className="flex items-center gap-7">
+          1-8 of 80
+          <div className="flex items-center gap-5">
+            <img src={leftArrow} alt="" />
+            <img src={RightArrow} alt="" />
           </div>
         </div>
       </div>

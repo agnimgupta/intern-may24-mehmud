@@ -106,10 +106,10 @@ const CouponDetails = () => {
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-sm">
                 <span
-                  className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
+                  className={`px-2 inline-flex text-xs leading-5 font-bold  ${
                     coupon.status === "Active"
-                      ? "bg-green-100 text-green-800"
-                      : "bg-red-100 text-red-800"
+                      ? " text-green-500"
+                      : " text-red-500"
                   }`}>
                   {coupon.status}
                 </span>
