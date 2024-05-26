@@ -29,7 +29,7 @@ const AddCoupons = () => {
                 <select
                   id="userType"
                   className="relative w-full mt-3 py-4 px-3 border-[2px] border-gray-[#eaebf6] rounded-xl text-sm font-medium outline-none">
-                  {/* <option value="">Select Type</option> */}
+                  <option value=""></option>
                   <option value="userType1">User Type 1</option>
                   <option value="userType2">User Type 2</option>
                 </select>
