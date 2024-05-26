@@ -3,6 +3,7 @@ import Root from "../Layout/Root";
 import AddCoupons from "../Pages/AddCoupons/AddCoupons";
 import CouponList from "../Pages/CouponList/CouponList";
 import CouponForm from "../Pages/AddCoupons/CouponForm";
+import UsageList from "../Pages/UsageList/UsageList";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/couponList",
         element: <CouponList />,
+      },
+      {
+        path: "/usageList",
+        element: <UsageList />,
       },
     ],
   },

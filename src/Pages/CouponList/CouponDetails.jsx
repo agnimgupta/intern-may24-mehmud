@@ -1,3 +1,6 @@
+import { IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
+
 const CouponDetails = () => {
   const coupons = [
     {
@@ -44,86 +47,45 @@ const CouponDetails = () => {
       maxRedemption: "5",
       appointmentType: "Video Call",
     },
-    {
-      name: "AlinMhew",
-      validFrom: "1st Feb 2023",
-      validTill: "22nd Mar 2023",
-      status: "Active",
-      visibility: "Show it to doctors with certain concern",
-      discountType: "Percentage",
-      inventory: "200",
-      maxRedemption: "25",
-      appointmentType: "Call",
-    },
-    {
-      name: "AlinMhew",
-      validFrom: "1st Feb 2023",
-      validTill: "22nd Mar 2023",
-      status: "Active",
-      visibility: "Show it to doctors with certain concern",
-      discountType: "Percentage",
-      inventory: "200",
-      maxRedemption: "25",
-      appointmentType: "Call",
-    },
-    {
-      name: "AlinMhew",
-      validFrom: "1st Feb 2023",
-      validTill: "22nd Mar 2023",
-      status: "Active",
-      visibility: "Show it to doctors with certain concern",
-      discountType: "Percentage",
-      inventory: "200",
-      maxRedemption: "25",
-      appointmentType: "Call",
-    },
-    {
-      name: "AlinMhew",
-      validFrom: "1st Feb 2023",
-      validTill: "22nd Mar 2023",
-      status: "Active",
-      visibility: "Show it to doctors with certain concern",
-      discountType: "Percentage",
-      inventory: "200",
-      maxRedemption: "25",
-      appointmentType: "Call",
-    },
   ];
 
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-100">
+      <table className="min-w-full">
+        <thead>
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
               <input type="checkbox" className="checkbox" />
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold   uppercase tracking-wider">
               Name
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Valid From
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Valid Till
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Status
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Visibility
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Discount Type
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Inventory
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Max Redemption
             </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+            <th className="px-6 py-3 text-left text-xs font-bold tracking-wider">
               Appointment Type
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium  uppercase tracking-wider">
+              Usage
             </th>
           </tr>
         </thead>
@@ -167,6 +129,11 @@ const CouponDetails = () => {
               <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                 {coupon.appointmentType}
               </td>
+              <NavLink to="/usageList">
+                <td className="px-6 py-4 whitespace-nowrap text-lg text-gray-900">
+                  <IoIosArrowForward />
+                </td>
+              </NavLink>
             </tr>
           ))}
         </tbody>
