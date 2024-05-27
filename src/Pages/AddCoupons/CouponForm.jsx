@@ -1,6 +1,36 @@
 import { FaRegCalendarAlt } from "react-icons/fa";
+import doc1 from "../../assets/doc1.png";
+import { useState } from "react";
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 
 const CouponForm = () => {
+  const [isDropdownOpen, setIsDropDownOpen] = useState(false);
+  const handleDropdown = () => {
+    setIsDropDownOpen(!isDropdownOpen);
+  };
+
+  const AllDoctors = [
+    {
+      image: "https://i.ibb.co/2dr4P4g/doc1.png",
+      name: "Alina Methew",
+    },
+    {
+      image: "https://i.ibb.co/rZPk3hP/doc2.png",
+      name: " Jack Jones",
+    },
+    {
+      image: "https://i.ibb.co/F0GLFTt/doc3.png",
+      name: "Raya Kamat",
+    },
+    {
+      image: "https://i.ibb.co/XLS2L7X/doc4.png",
+      name: " Reshmi Desai",
+    },
+    {
+      image: "https://i.ibb.co/3YbJyF7/doc5.png",
+      name: "Darmesh Saglani",
+    },
+  ];
   return (
     <>
       <div className="px-10 font-medium text-[#28643b] breadcrumbs">
@@ -29,8 +59,18 @@ const CouponForm = () => {
                       id="userType"
                       className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
                       <option value=""></option>
-                      <option value="userType1">User Type 1</option>
-                      <option value="userType2">User Type 2</option>
+                      <option value="Show it to All Doctors">
+                        Show it to All Doctors
+                      </option>
+                      <option value="Show it to certain specialities">
+                        Show it to certain specialities
+                      </option>
+                      <option value="Show it to doctors with certain concern">
+                        Show it to doctors with certain concern
+                      </option>
+                      <option value="Select Particular Docs">
+                        Select Particular Docs
+                      </option>
                     </select>
                   </div>
                   <div className="w-full">
@@ -40,13 +80,26 @@ const CouponForm = () => {
                       Select Certain (Based on visibility)
                       <span className="text-red-600 ml-1">*</span>
                     </label>
-                    <select
-                      id="userType"
-                      className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
-                      <option value=""></option>
-                      <option value="userType1">User Type 1</option>
-                      <option value="userType2">User Type 2</option>
-                    </select>
+                    <div
+                      onClick={handleDropdown}
+                      className="relative  flex items-center justify-between w-full mt-3 py-4 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
+                      {" "}
+                      <h1 className="font-medium">All Doctors</h1>
+                      {isDropdownOpen ? (
+                        <div className="absolute z-30 space-y-3 bg-white border rounded-lg px-5 py-1 w-full left-0 top-12 shadow-lg">
+                          {AllDoctors?.map((doctor, idx) => (
+                            <div key={idx} className="flex items-center gap-3">
+                              {" "}
+                              <img src={doctor?.image} alt="" />
+                              {doctor?.name}
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                      <IoIosArrowDown className="font-bold text-black" />
+                    </div>
                   </div>
                 </div>
                 {/* 2nd row */}
@@ -92,8 +145,8 @@ const CouponForm = () => {
                       id="userType"
                       className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
                       <option value=""></option>
-                      <option value="userType1">User Type 1</option>
-                      <option value="userType2">User Type 2</option>
+                      <option value="Percentage Off">Percentage Off</option>
+                      <option value="Fixed Amount Off">Fixed Amount Off</option>
                     </select>
                   </div>
                   <div className="w-full">
@@ -125,8 +178,11 @@ const CouponForm = () => {
                       id="userType"
                       className="relative w-full mt-3 py-3 px-3 border-[1.9px] border-gray-[#eaebf6] rounded-xl text-sm  outline-none">
                       <option value=""></option>
-                      <option value="userType1">User Type 1</option>
-                      <option value="userType2">User Type 2</option>
+                      <option value="All">All</option>
+                      <option value="Offline">Offline</option>
+                      <option value="Chat">Chat</option>
+                      <option value="Audio">Audio</option>
+                      <option value="Video">Video</option>
                     </select>
                   </div>
                   <div className="w-full"></div>
